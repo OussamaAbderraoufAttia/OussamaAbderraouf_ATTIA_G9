@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimePlanner.Backend.Controllers.PeriodChoiceController2">
+   <center>
+      <VBox prefHeight="600.0" prefWidth="535.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="623.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="429.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="380.0" text="Creat your  schedule period" textFill="#1baa99">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="658.0" text="Hello new My Desktop Planner user, in order to start using this application you have to fill first your free period." textFill="#212121" textOverrun="CLIP">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="456.0" prefWidth="407.0">
+                     <children>
+                        <HBox prefWidth="671.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Start date">
+                                       <padding>
+                                          <Insets bottom="5.0" right="10.0" top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="firstday" prefHeight="48.0" prefWidth="393.0" promptText="Start date should be greater or equals to the first date" style="-fx-border-color: #1BAA99;" styleClass="Datepicker" />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="End date">
+                                       <padding>
+                                          <Insets bottom="5.0" right="10.0" top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="lastday" prefHeight="48.0" prefWidth="393.0" promptText="End date should be greater or equals to the current date" style="-fx-background-color: transparent; -fx-border-color: #1BAA99;" styleClass="Datepicker" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Category">
+                                       <padding>
+                                          <Insets bottom="5.0" right="10.0" top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="categoryname" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent; -fx-border-color: #1BAA99;">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="12.0" prefWidth="103.0" text="Chose a color">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="colorcategoryteComboBox" onAction="#initializeColorCategoryteComboBox" prefWidth="150.0" promptText="Colors" style="-fx-border-color: #1BAA99; -fx-background-color: transp;" visibleRowCount="5" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="157.0" prefWidth="630.0">
+                           <children>
+                              <Pane fx:id="category1" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat1" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category11" layoutX="10.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat11" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category111" layoutX="100.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat111" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category1111" layoutX="191.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat1111" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category11111" layoutX="281.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat11111" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category111111" layoutX="372.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat111111" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="category1111111" layoutX="462.0" layoutY="15.0" prefHeight="90.0" prefWidth="90.0">
+                                 <children>
+                                    <FlowPane fx:id="Cat1111111" prefHeight="160.0" prefWidth="90.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding></HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="630.0">
+                           <children>
+                              <Label fx:id="errormessage" prefHeight="18.0" prefWidth="463.0" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Button mnemonicParsing="false" onAction="#addCategory" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #1BAA99;" text="Add category" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="40.0" right="30.0" />
+         </padding>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="600.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="600.0" prefWidth="149.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="474.0" fitWidth="200.0">
+               <image>
+                  <Image url="@backg.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="101.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="nextbutton" mnemonicParsing="false" onAction="#CheckandSet" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: transp; -fx-border-color: #1BAA99;" text="Next">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

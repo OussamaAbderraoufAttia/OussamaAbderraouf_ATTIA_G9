@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimePlanner.Backend.Controllers.RegistrationController">
+   <right>
+      <VBox prefHeight="600.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="252.0">
+               <image>
+                  <Image url="@backg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="600.0" prefWidth="219.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="79.0">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@horloge.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="20.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="600.0" prefWidth="444.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="429.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="103.0" prefWidth="429.0" text="Creat an account" textFill="#1baa99">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="456.0" prefWidth="407.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="48.0" text="Name">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="453.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="nomField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="25.0" prefWidth="122.0" text="Telephone">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="453.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="telephoneField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="451.0" style="-fx-background-color: transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="25.0" prefWidth="122.0" text="Email">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="453.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="25.0" prefWidth="122.0" text="Pasword">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="453.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="468.0" style="-fx-background-color: transaprent;" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addUser" prefHeight="39.0" prefWidth="323.0" style="-fx-background-color: #C7EDE7; -fx-background-radius: 10px;" text="Sign up" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="SignInButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SignIn" prefHeight="50.0" prefWidth="181.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #C7EDE7; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Sign in">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="120.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

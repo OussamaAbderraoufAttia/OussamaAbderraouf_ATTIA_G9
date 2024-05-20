@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimePlanner.Backend.Controllers.ProfileController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="900.0" style="-fx-background-color: #1BAA99;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@./horloge.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="35.0" prefWidth="268.0" text="My Desktop Planner" textFill="WHITE">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="538.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#Calendar" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="Calendar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Period" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="Period" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="9.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Project" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="Project" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Tasks" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="Tasks" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Statistics" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="Statistics" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#History" style="-fx-background-color: trans;" stylesheets="@Profile.css" text="History" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Profile" style="-fx-background-color: trans;" styleClass="selected-border" stylesheets="@Profile.css" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="CENTER" prefHeight="529.0" prefWidth="365.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="390.0" prefWidth="282.0" style="-fx-border-color: #1A80FD; -fx-border-radius: 10px;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="136.0" fitWidth="136.0">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="pseudo" prefHeight="27.0" prefWidth="66.0" textFill="#1a80fd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="48.0" prefWidth="260.0" style="-fx-border-color: #1A80FD; -fx-border-width: 0 0 2 0;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="74.0" text="Email" textFill="#1a80fd">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" prefHeight="17.0" prefWidth="154.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="48.0" prefWidth="260.0" style="-fx-border-color: #1A80FD; -fx-border-width: 0 0 2 0;">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="144.0" text="Phone number" textFill="#1a80fd">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="telephone" prefHeight="17.0" prefWidth="154.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="529.0" prefWidth="448.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="448.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="217.0" text="Edit your profile" textFill="#1baa99">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label text="Pseudo">
+                     <padding>
+                        <Insets bottom="5.0" right="10.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="475.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="nomField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent; -fx-border-radius: 10px;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Email">
+                     <padding>
+                        <Insets bottom="5.0" right="10.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="475.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent; -fx-border-radius: 10px;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Password">
+                     <padding>
+                        <Insets bottom="5.0" right="10.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="475.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <PasswordField fx:id="passwordField" prefHeight="45.0" prefWidth="419.0" style="-fx-background-color: transp;" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Phone number">
+                     <padding>
+                        <Insets bottom="5.0" right="10.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="475.0" style="-fx-border-color: #1BAA99; -fx-border-radius: 10px;">
+                     <children>
+                        <TextField fx:id="telephoneField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="453.0" style="-fx-background-color: transparent; -fx-border-radius: 10px;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#saveChanges" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: #1a80fd; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="40.0" right="50.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>
